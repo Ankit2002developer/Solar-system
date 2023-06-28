@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en-yus" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <meta name="keywords" content="CSS, Solar system" />
+    <meta name="description" content="Making static solar system using css" />
+    <meta name="robots" content="index, follow" />
+    <title>Solar system using CSS</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      .hover:hover {
+        background-color: aliceblue;
+      }
+      .sun {
+        background-color: gold;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: relative;
+        top: 290px;
+        left: 400px;
+        z-index: 2000;
+      }
+      .mercury-orbit {
+        width: 300px;
+        height: 170px;
+        border: 2px solid white;
+        position: relative;
+        top: 154px;
+        left: 330px;
+        border-radius: 100%;
+      }
+      .mercury {
+        background-color: rgb(191, 223, 126);
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        position: absolute;
+        left: 272px;
+        top: 35px;
+        z-index: 900;
+      }
+      .venus-orbit {
+        width: 390px;
+        height: 230px;
+        border: 2px solid white;
+        position: relative;
+        top: -50px;
+        left: 300px;
+        border-radius: 100%;
+      }
+      .venus {
+        background-color: rgb(218, 124, 187);
+        width: 28px;
+        height: 28px;
+        border-radius: 100%;
+        position: absolute;
+        top: 40px;
+        left: 347px;
+        z-index: 800;
+      }
+      .earth-orbit {
+        width: 480px;
+        height: 278px;
+        border: 2px solid white;
+        border-radius: 100%;
+        position: relative;
+        top: -307px;
+        left: 270px;
+      }
+      .earth {
+        background-color: rgb(137, 137, 227);
+        width: 32px;
+        height: 32px;
+        border-radius: 100%;
+        position: absolute;
+        top: 45px;
+        left: 424px;
+        z-index: 700;
+      }
+      .mars-orbit {
+        width: 580px;
+        height: 330px;
+        border: 2px solid white;
+        border-radius: 100%;
+        position: relative;
+        top: -615px;
+        left: 240px;
+      }
+      .mars {
+        width: 23px;
+        height: 23px;
+        border-radius: 100%;
+        background-color: rgb(185, 157, 86);
+        position: absolute;
+        top: 59px;
+        left: 518px;
+        z-index: 600;
+      }
+      .jupiter-orbit {
+        width: 700px;
+        height: 395px;
+        border: 2px solid white;
+        border-radius: 100%;
+        position: relative;
+        top: -980px;
+        left: 206px;
+      }
+      .jupiter {
+        width: 65px;
+        height: 65px;
+        background-color: rgb(167, 101, 101);
+        border-radius: 100%;
+        position: absolute;
+        top: 80px;
+        left: 632px;
+        z-index: 500;
+      }
+      .saturn-orbit {
+        width: 825px;
+        height: 452px;
+        border-radius: 100%;
+        border: 2px solid white;
+        position: absolute;
+        top: 120px;
+        left: 180px;
+      }
+      .saturn {
+        width: 50px;
+        height: 50px;
+        background-color: rgb(70, 55, 55);
+        border-radius: 100%;
+        position: absolute;
+        top: 120px;
+        left: 772px;
+        z-index: 400;
+      }
+      .uranus-orbit {
+        width: 975px;
+        height: 525px;
+        border: 2px solid white;
+        border-radius: 100%;
+        position: absolute;
+        top: 84px;
+        left: 140px;
+      }
+      .uranus {
+        width: 40px;
+        height: 40px;
+        background-color: rgb(18, 18, 66);
+        border-radius: 100%;
+        position: absolute;
+        top: 180px;
+        left: 940px;
+        z-index: 300;
+      }
+      .neptune-orbit {
+        width: 1150px;
+        height: 610px;
+        border: 2px solid white;
+        border-radius: 100%;
+        position: absolute;
+        top: 43px;
+        left: 100px;
+      }
+      .neptune {
+        width: 38px;
+        height: 38px;
+        background-color: rgb(5, 70, 70);
+        border-radius: 100%;
+        position: absolute;
+        top: 100px;
+        left: 1015px;
+        z-index: 100;
+      }
+      .line {
+        width: 80%;
+        height: 0.2vh;
+        margin-left: 10%;
+        border: 3px dotted ghostwhite;
+        position: absolute;
+        top: 1200px;
+      }
+      p {
+        text-align: center;
+        font-size: 3rem;
+        color: aliceblue;
+        margin: 2%;
+      }
+      .font-size p {
+        font-size: 1.8rem;
+      }
+      .sun > P {
+        position: relative;
+        font-size: 3rem;
+        top: -60px;
+      }
+      .jupiter > p {
+        position: relative;
+        top: -52px;
+        left: -13px;
+        font-size: 2rem;
+      }
+      .saturn > p {
+        position: relative;
+        top: -45px;
+        left: -15px;
+        font-size: 1.8rem;
+      }
+      .uranus > p {
+        position: relative;
+        top: -37px;
+        left: -18px;
+        font-size: 1.5rem;
+      }
+      .neptune > p {
+        position: relative;
+        top: -32px;
+        left: -20px;
+        font-size: 1.3rem;
+      }
+      .earth > p {
+        position: relative;
+        top: -28px;
+        left: -9px;
+        font-size: 1.2rem;
+      }
+      .venus > p {
+        position: relative;
+        top: -25px;
+        left: -11px;
+        font-size: 1.1rem;
+      }
+      .mars > p {
+        position: relative;
+        top: -22px;
+        left: -8px;
+        font-size: 1rem;
+      }
+      .mercury > P {
+        position: relative;
+        top: -20px;
+        left: -15px;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sun hover"></div>
+    <div class="mercury-orbit">
+      <div class="mercury hover"></div>
+    </div>
+    <div class="venus-orbit">
+      <div class="venus hover"></div>
+    </div>
+    <div class="earth-orbit">
+      <div class="earth hover"></div>
+    </div>
+    <div class="mars-orbit">
+      <div class="mars hover"></div>
+    </div>
+    <div class="jupiter-orbit">
+      <div class="jupiter hover"></div>
+    </div>
+    <div class="saturn-orbit">
+      <div class="saturn hover"></div>
+    </div>
+    <div class="uranus-orbit">
+      <div class="uranus hover"></div>
+    </div>
+    <div class="neptune-orbit">
+      <div class="neptune hover"></div>
+    </div>
+    <div class="font-size">
+      <div class="sun" style="position: absolute; top: 1090px; left: 200px">
+        <p>Sun</p>
+      </div>
+      <div class="jupiter" style="position: absolute; top: 1126px; left: 380px">
+        <p>Jupiter</p>
+      </div>
+      <div class="saturn" style="position: absolute; top: 1142px; left: 520px">
+        <p>Saturn</p>
+      </div>
+      <div class="uranus" style="position: absolute; top: 1152px; left: 640px">
+        <p>Uranus</p>
+      </div>
+      <div class="neptune" style="position: absolute; top: 1155px; left: 750px">
+        <p>Neptune</p>
+      </div>
+      <div class="earth" style="position: absolute; top: 1162px; left: 870px">
+        <p>Earth</p>
+      </div>
+      <div class="venus" style="position: absolute; top: 1165px; left: 980px">
+        <p>Venus</p>
+      </div>
+      <div class="mars" style="position: absolute; top: 1170px; left: 1090px">
+        <p>Mars</p>
+      </div>
+      <div
+        class="mercury"
+        style="position: absolute; top: 1176px; left: 1200px"
+      >
+        <p>Mercury</p>
+      </div>
+    </div>
+    <div class="line">
+      <p>Size comparison</p>
+    </div>
+  </body>
+</html>
